@@ -6,6 +6,8 @@ This is a template for a Node.js API project with Express for the web project of
 
 - [The tech stack](#the-tech-stack)
 
+- [The file structure](#the-file-structure)
+
 - [Installing and running the application](#installing-and-running-the-application)
 
 
@@ -26,7 +28,21 @@ Express is a minimal and flexible Node.js web application framework. It simplifi
 
 ### What is Nodemon?
 
-Nodemon is a utility that monitors your Node.js application for changes and automatically restarts the server when a change is detected. 
+Nodemon is a utility that monitors your Node.js application for changes and automatically restarts the server when a change is detected.
+
+## The file structure
+
+`controllers/`: Contains the code responsible for handling user input, interacting with models, and returning appropriate responses. 
+
+`middleware/`: Contains functions executed between the request and the response for tasks such as authentication, error handling, and request validation.
+
+`models/`: Contains the logic for interacting with the database.
+
+`routes/`: Contains the route definitions and their associated controllers. Separating the routes makes it easier to manage, update, and test individual endpoints.
+
+`app.js`: Initializes the application, sets up middleware, and configures the routes. This file serves as the central point for configuring your application.
+
+`index.js`: The entry point of the application, responsible for starting the server and listening for incoming requests.
 
 ## Installing and running the application
 
