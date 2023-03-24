@@ -39,25 +39,18 @@ as you would do in python with the command `python my_file.py`.
 
 ## Installing and running the application
 
-Follow these steps to run the project:
-### Prerequisites
-
 1. Install Node.js : https://nodejs.org/.
 
-### Installation
-
-1. Clone the project repository:
+2. Clone the project repository:
 
         git clone https://github.com/louis-marceron/web-project-api-template
 
 
-2. Navigate to the root of the project and install the dependencies using NPM:
+3. Navigate to the root of the project and install the dependencies using NPM:
 
         npm install
 
-### Running the application
-
-1. Start the application using an NPM script that uses Nodemon:
+4. Start the application using an NPM script that uses Nodemon:
 
         npm run dev
 
