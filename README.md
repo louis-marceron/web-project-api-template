@@ -19,9 +19,11 @@ as you would do in python with the command `python my_file.py`.
 
 **NPM (Node Package Manager)**: default package manager for Node.js. It helps you manage dependencies for your libraries and modules (like pip in Python). When you initialize a Node.js project using `npm init`, a package.json file is created, which keeps track of your project's metadata, dependencies, and scripts. Use `npm install` to install dependencies.
 
-**Express**: minimal and flexible Node.js web application framework. It simplifies the process of handling HTTP requests and responses, managing middleware, and routing
+**express**: minimal and flexible Node.js web application framework. It simplifies the process of handling HTTP requests and responses, managing middleware, and routing
 
-**Nodemon**: utility that monitors your Node.js application for changes and automatically restarts the server when a change is detected.
+**nodemon**: utility that monitors your Node.js application for changes and automatically restarts the server when a change is detected.
+
+**dotenv**: tool that loads environment variables, which can be accessed from anywhere in your project, and allows you to store sensitive information such as database credentials in a separate .env file that is not tracked by Git when committing files.
 
 ## The file structure
 
