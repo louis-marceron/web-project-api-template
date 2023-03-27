@@ -25,6 +25,8 @@ as you would do in python with the command `python my_file.py`.
 
 **dotenv**: tool that loads environment variables, which can be accessed from anywhere in your project, and allows you to store sensitive information such as database credentials in a separate .env file that is not tracked by Git when committing files.
 
+**helmet**: middleware that helps secure your Express apps by setting various HTTP headers.
+
 ## The file structure
 
 `controllers/`: Contains the code responsible for handling user input, interacting with models, and returning appropriate responses. 
