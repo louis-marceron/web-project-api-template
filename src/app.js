@@ -2,12 +2,12 @@
 const express = require('express');
 const helmet = require('helmet');
 
-// Import error handling middleware
-const notFoundErrorHandler = require('./middlewares/error-handlers/not-found-error-handler.js');
-const genericErrorHandler = require('./middlewares/error-handlers/generic-error-handler.js');
-
 // Import custom routes
-// const exampleRoutes = require('./routes/example');
+const booksRoutes = require('./routes/books');
+
+// Import error handling middleware
+const notFoundErrorHandler = require('./middlewares/error-handlers/not-found-error-handler');
+const genericErrorHandler = require('./middlewares/error-handlers/generic-error-handler');
 
 // Create an Express application
 const app = express();
@@ -20,6 +20,9 @@ app.use(express.urlencoded({ extended: true })); // Allow to recognize the incom
 
 // Custom middlewares
 // app.use(customMiddleware);
+
+// Custom routes
+app.use('/books', booksRoutes);
 
 // Error handling middlewares (must be added after all other middlewares)
 app.use(notFoundErrorHandler);
