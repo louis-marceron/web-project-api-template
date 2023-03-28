@@ -6,10 +6,20 @@ let books = [
     new Book(3, '1984', 'George Orwell'),
 ];
 
+/**
+ * @param {Request} req
+ * @param {Response} res
+ * @returns {void}
+ */
 exports.getAllBooks = (req, res) => {
     res.json(books);
 };
 
+/**
+ * @param {Request} req
+ * @param {Response} res
+ * @returns {void}
+ */
 exports.getBookById = (req, res) => {
     const bookId = parseInt(req.params.id);
     const book = books.find((b) => b.id === bookId);
@@ -21,6 +31,11 @@ exports.getBookById = (req, res) => {
     res.json(book);
 };
 
+/**
+ * @param {Request} req
+ * @param {Response} res
+ * @returns {void}
+ */
 exports.createBook = (req, res) => {
     const newBook = {
         id: books.length + 1,
@@ -32,6 +47,11 @@ exports.createBook = (req, res) => {
     res.status(201).json(newBook);
 };
 
+/**
+ * @param {Request} req
+ * @param {Response} res
+ * @returns {void}
+ */
 exports.updateBook = (req, res) => {
     const bookId = parseInt(req.params.id);
     const bookIndex = books.findIndex((b) => b.id === bookId);
@@ -50,6 +70,11 @@ exports.updateBook = (req, res) => {
     res.json(updatedBook);
 };
 
+/**
+ * @param {Request} req
+ * @param {Response} res
+ * @returns {void}
+ */
 exports.deleteBook = (req, res) => {
     const bookId = parseInt(req.params.id);
 
