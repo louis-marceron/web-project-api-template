@@ -28,8 +28,5 @@ app.use('/books', booksRoutes);
 app.use(notFoundErrorHandler);
 app.use(genericErrorHandler);
 
-// Use custom routes in the application
-// app.use('/example', exampleRoutes);
-
 // Export the app module for use in other files (index.js)
 module.exports = app;
