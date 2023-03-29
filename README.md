@@ -1,61 +1,62 @@
-# REST API with Express
+# API REST avec Express
 
-This is a template for a Node.js API project with Express for the web project of the third year of engineering school in Computer Science at the University of Polytech Montpellier (2022-2023).
+Ceci est un modèle d'API pour le projet web en IG3 à Polytech Montpellier (2022 - 2023). Le serveur utilise Node JS avec le framework Express.
 
-## Table of Contents
+## Table des matières
 
-- [The tech stack](#the-tech-stack)
+- [Les technologies utilisées](#les-technologies-utilisées)
 
-- [The file structure](#the-file-structure)
+- [La structure des fichiers](#la-structure-des-fichiers)
 
-- [Installing and running the application](#installing-and-running-the-application)
+- [Installation et exécution de l'application](#installation-et-exécution-de-lapplication)
 
+## Les technologies utilisées
 
-## The tech stack
+**Node.js :** environnement d'exécution JavaScript qui permet d'exécuter du JavaScript en dehors d'un navigateur web.
+Pour exécuter un fichier JavaScript, tapez `node mon_fichier.js`
+comme vous le feriez en Python avec la commande `python mon_fichier.py`.
 
-**Node.js**: JavaScript runtime environment that allows you to execute JavaScript outside of a web browser.
-To run a JavaScript file, type `node my_file.js`
-as you would do in python with the command `python my_file.py`.
+**NPM (Node Package Manager) :** gestionnaire de paquets (librairies) pour Node.js. Il est utilisé pour les intaller avec leurs dépendances (comme pip en Python). Lorsque vous initialisez un projet Node.js avec `npm init`, un fichier package.json est créé. Il garde la trace des métadonnées de votre projet, des paquets et de leurs dépendances. Utilisez `npm install` pour installer les paquets et leurs dépendances.
 
-**NPM (Node Package Manager)**: default package manager for Node.js. It helps you manage dependencies for your libraries and modules (like pip in Python). When you initialize a Node.js project using `npm init`, a package.json file is created, which keeps track of your project's metadata, dependencies, and scripts. Use `npm install` to install dependencies.
+Les outils suivants sont des librairies installées à l'aide de NPM : 
 
-**express**: minimal and flexible Node.js web application framework. It simplifies the process of handling HTTP requests and responses, managing middleware, and routing
+**express :** framework qui simplifie le processus de gestion des requêtes et réponses HTTP.
 
-**nodemon**: utility that monitors your Node.js application for changes and automatically restarts the server when a change is detected.
+**nodemon :** module qui redémarre automatiquement le serveur lorsque le code est modifié. Il n'est utilisé qu'en local, dans un environnement de développement.
 
-**dotenv**: tool that loads environment variables, which can be accessed from anywhere in your project, and allows you to store sensitive information such as database credentials in a separate .env file that is not tracked by Git when committing files.
+**dotenv :** outil qui charge les variables d'environnement depuis le fichier .env. Les variables d'environnement sont des variables accessibles depuis n'importe où dans votre projet, qui stockent des informations sensibles telles que les informations d'identification de la base de données. 
+⚠️ Le fichier .env ne doit jamais être envoyé sur un repository Git distant pour des raisons de sécurité.
 
-**helmet**: middleware that helps secure your Express apps by setting various HTTP headers.
+**helmet :** middleware qui aide à sécuriser vos applications Express en définissant divers en-têtes HTTP.
 
-## The file structure
+## La structure des fichiers
 
-`controllers/`: Contains the code responsible for handling user input, interacting with models, and returning appropriate responses. 
+**controllers/ :** Contient le code responsable de la gestion des entrées utilisateur, de l'interaction avec les modèles et du renvoi des réponses appropriées.
 
-`middleware/`: Contains functions executed between the request and the response for tasks such as authentication, error handling, and request validation.
+**middleware/ :** Contient des fonctions exécutées entre la requête et la réponse pour des tâches telles que l'authentification, la gestion des erreurs et la validation des requêtes.
 
-`models/`: Contains the logic for interacting with the database.
+**models/ :** Contient la logique pour interagir avec la base de données.
 
-`routes/`: Contains the route definitions and their associated controllers. Separating the routes makes it easier to manage, update, and test individual endpoints.
+**routes/ :** Contient les définitions des routes et leurs contrôleurs associés. Séparer les routes permet de gérer, mettre à jour et tester plus facilement les points de terminaison individuels.
 
-`app.js`: Initializes the application, sets up middleware, and configures the routes. This file serves as the central point for configuring your application.
+**app.js :** Initialise l'application, configure les middlewares et les routes. Ce fichier sert de point central pour configurer votre application.
 
-`index.js`: The entry point of the application, responsible for starting the server and listening for incoming requests.
+**index.js :** Le point d'entrée de l'application, responsable du démarrage du serveur et de l'écoute des requêtes entrantes.
 
-## Installing and running the application
+## Installation et exécution de l'application
 
-1. Install Node.js : https://nodejs.org/.
+1. Installez Node.js : https://nodejs.org/
 
-2. Clone the project repository:
+2. Clonez le dépôt du projet :
 
         git clone https://github.com/louis-marceron/web-project-api-template
 
-
-3. Navigate to the root of the project and install the dependencies using NPM:
+3. Accédez à la racine du projet et installez les paquets et leurs dépendances :
 
         npm install
 
-4. Start the application using an NPM script that uses Nodemon:
+4. Démarrez l'application :
 
         npm run dev
 
-2. Open your browser and navigate to http://localhost:3000 (or the specified port) to access the application.
+5. Ouvrez votre navigateur et accédez à http://localhost:3000 (ou le port spécifié) pour accéder à l'application.
