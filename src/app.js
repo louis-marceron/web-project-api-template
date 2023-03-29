@@ -6,8 +6,8 @@ const helmet = require('helmet');
 const booksRoutes = require('./routes/books');
 
 // Import error handling middleware
-const notFoundErrorHandler = require('./middlewares/error-handlers/not-found-error-handler');
-const genericErrorHandler = require('./middlewares/error-handlers/generic-error-handler');
+const notFoundErrorHandler = require('./middlewares/error-handlers/notFoundErrorHandler');
+const genericErrorHandler = require('./middlewares/error-handlers/genericErrorHandler');
 
 // Create an Express application
 const app = express();
