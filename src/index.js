@@ -1,14 +1,14 @@
 const http = require('http');
 
-// Load the environment variables from the .env file
+// Empêche le programme de crasher en production, car il n'y pas dotenv
 if (process.env.NODE_ENV !== 'production') {
     require('dotenv').config();
 }
 
-const app = require('./app'); // Import the app module from app.js
-const sequelize = require('./config/database'); // Import the sequelize instance from database.js
+const app = require('./app'); 
+const sequelize = require('./config/database');
 
-// Set the port on which the server will listen for incoming requests
+// Défini le port où le serveur écoutera les requêtes entrantes
 const PORT = process.env.PORT || 3000;
 
 (async () => {
