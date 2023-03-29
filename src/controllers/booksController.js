@@ -1,24 +1,10 @@
 const Book = require('../models/Book');
 
-/**
- * Get all books
- * @async
- * @function
- * @param {object} req - Express request object
- * @param {object} res - Express response object
- */
 exports.getAllBooks = async (req, res) => {
     const books = await Book.findAll();
     res.json(books);
 };
 
-/**
- * Get book by ID
- * @async
- * @function
- * @param {object} req - Express request object
- * @param {object} res - Express response object
- */
 exports.getBookById = async (req, res) => {
     const book = await Book.findByPk(req.params.id);
 
@@ -29,13 +15,6 @@ exports.getBookById = async (req, res) => {
     }
 };
 
-/**
- * Create a new book
- * @async
- * @function
- * @param {object} req - Express request object
- * @param {object} res - Express response object
- */
 exports.createBook = async (req, res) => {
     const { title, author } = req.body;
 
@@ -47,13 +26,6 @@ exports.createBook = async (req, res) => {
     }
 };
 
-/**
- * Update an existing book
- * @async
- * @function
- * @param {object} req - Express request object
- * @param {object} res - Express response object
- */
 exports.updateBook = async (req, res) => {
     const { title, author } = req.body;
     const bookId = req.params.id;
@@ -73,13 +45,6 @@ exports.updateBook = async (req, res) => {
     }
 };
 
-/**
- * Delete a book by ID
- * @async
- * @function
- * @param {object} req - Express request object
- * @param {object} res - Express response object
- */
 exports.deleteBook = async (req, res) => {
     const bookId = req.params.id;
 

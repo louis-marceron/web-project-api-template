@@ -8,8 +8,6 @@ if (process.env.NODE_ENV !== 'production') {
 const app = require('./app'); // Import the app module from app.js
 const sequelize = require('./config/database'); // Import the sequelize instance from database.js
 
-
-
 // Set the port on which the server will listen for incoming requests
 const PORT = process.env.PORT || 3000;
 
