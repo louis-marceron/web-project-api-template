@@ -3,10 +3,11 @@ const http = require('http');
 const app = require('./app'); // Import the app module from app.js
 
 // Load the environment variables from the .env file
-if (process.env.NODE_ENV === 'development') {
+if (process.env.NODE_ENV !== 'production') {
 require('dotenv').config();
 }
 
+const app = require('./app'); // Import the app module from app.js
 // Set the port on which the server will listen for incoming requests
 const port = process.env.PORT || 3000;
 
