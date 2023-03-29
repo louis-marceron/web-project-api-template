@@ -1,4 +1,4 @@
-# API REST avec Express
+# Modèle d'API avec Express
 
 Ceci est un modèle d'API pour le projet web en IG3 à Polytech Montpellier (2022 - 2023). Le serveur utilise Node JS avec le framework Express.
 
