@@ -114,6 +114,7 @@ Le guide donné par Polytech : https://docs.google.com/document/d/1XUHSBpwVw_dUV
         VALUES ('Les Miserables', 'Victor Hugo');
 
 9. Vous pouvez enfin tester l'api en utilisant l'adresse suivante : `http://mon-application.cluster-ig3.igpolytech.fr/books` 
+⚠️ Si vous êtes sur Firefox que vous avez un message d'erreur du type : `Cannot GET /books`, il faut cliquer sur le cadenas en haut à droite de la barre d'adresse et cliquer sur "Ajouter une exception". Réécrivez ensuite l'URL en enlevant le "s" à "https".
 
 ## Travail à apporter
 
