@@ -11,6 +11,9 @@ const sequelize = require('./config/database');
 // Défini le port où le serveur écoutera les requêtes entrantes
 const PORT = process.env.PORT || 3000;
 
+// Charge les modelels de la base de données pour que Sequelize puisse les synchroniser
+require('./models/Book');
+
 (async () => {
   try {
       await sequelize.authenticate();
