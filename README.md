@@ -4,11 +4,13 @@ Ceci est un modèle d'API pour le projet web en IG3 à Polytech Montpellier (202
 
 ## Table des matières
 
-- [Les technologies utilisées](#les-technologies-utilisées)
-
-- [La structure des fichiers](#la-structure-des-fichiers)
-
-- [Installation et exécution de l'application](#installation-et-exécution-de-lapplication)
+- [Modèle d'API avec Express](#modèle-dapi-avec-express)
+  - [Table des matières](#table-des-matières)
+  - [Les technologies utilisées](#les-technologies-utilisées)
+  - [La structure des fichiers](#la-structure-des-fichiers)
+  - [Installation et exécution de l'application](#installation-et-exécution-de-lapplication)
+  - [Travail à apporter](#travail-à-apporter)
+  - [Test de l'API](#test-de-lapi)
 
 ## Les technologies utilisées
 
@@ -60,3 +62,35 @@ Les outils suivants sont des librairies installées à l'aide de NPM :
         npm run dev
 
 5. Ouvrez votre navigateur et accédez à http://localhost:3000 (ou le port spécifié) pour accéder à l'application.
+
+## Travail à apporter
+
+1. Pour des raisons de sécurité, il faut faire passer le serveur http en serveur https afin de sécuriser l'échange de requêtes. (WIP)
+
+2. Afin de gérer des utilisateurs dans notre api, nous vous proposons les articles suivants: 
+        - [Authentification utilisateurs (OpenClassrooms)](https://openclassrooms.com/fr/courses/6390246-passez-au-full-stack-avec-node-js-express-et-mongodb/6466459-optimisez-la-structure-du-back-end)
+        - [Forgot password functionality (Medium)](https://cinquewebdev.medium.com/how-to-implement-forgot-password-functionality-with-jwt-authentication-e1381263026c)
+Attention: ces ressources peuvent comporter des erreurs ou ne pas utiliser les mêmes librairies que vous
+
+## Test de l'API
+
+Une fois les routes de notre API configurées dans notre backend, il nous faut les tester. Pour cela vous pouvez utilier soit [Insomnia](https://insomnia.rest/), soit [Postman](https://www.postman.com/).
+
+1. L'adresse du serveur est: http://localhost:3000/
+
+2. La route permettant d'effectuer des requètes REST sur les livres de la base de données est : "/books"
+
+3. Nous utiliserons donc l'URL "http://localhost:3000/books" afin de travailler avec les livres de notre base de données
+
+4. Tester l'API avec les méthodes (CRUD entre parenthèses) GET (Read), POST (Create), PUT (Update), DELETE (Delete). Le serveur accepte les requètes sous format FORM URL ENCODED et JSON)
+        - GET prend ou pas un argument dans l'URL
+        - POST ne prend pas d'arguments dans l'URL mais nécessite des données envoyées dans le body de la requête
+        - PUT prend un argument dans l'URL et nécessite des données dans le body de la requête
+        - DELETE prend un argument dans l'URL
+
+|Method|Argument|Header|Body|
+|:----:|:------:|:----:|:--:|
+|GET|:white_check_mark: OR :x:|:white_check_mark:|:x:|
+|POST|:x:|:white_check_mark:|:white_check_mark:|
+|PUT|:white_check_mark:|:white_check_mark:|:white_check_mark:|
+|DELETE|:white_check_mark:|:white_check_mark:|:x:|
