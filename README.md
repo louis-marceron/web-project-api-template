@@ -113,7 +113,7 @@ Le guide donné par Polytech : https://docs.google.com/document/d/1XUHSBpwVw_dUV
         INSERT INTO Book (title, author)
         VALUES ('Les Miserables', 'Victor Hugo');
 
-9. Vous pouvez enfin tester l'api en utilisant l'adresse suivante : `http://cluster-ig3.igpolytech.fr/mon-application/books` 
+9. Vous pouvez enfin tester l'api en utilisant l'adresse suivante : `http://mon-application.cluster-ig3.igpolytech.fr/books` 
 
 ## Travail à apporter
 
