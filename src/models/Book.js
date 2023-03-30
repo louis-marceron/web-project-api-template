@@ -1,7 +1,7 @@
 const { DataTypes } = require('sequelize');
 const sequelize = require('../config/database');
 
-const Book = sequelize.define('Book', {
+const Book = sequelize.define('book', {
     id: {
         type: DataTypes.INTEGER,
         primaryKey: true,
@@ -17,7 +17,8 @@ const Book = sequelize.define('Book', {
         allowNull: false,
     },
 }, {
-    timestamps: false,
+    timestamps: false, // Empêche Sequelize de créer les colonnes createdAt et updatedAt
+    freezeTableName: true, // Empêche Sequelize de modifier le nom de la table
 });
 
 module.exports = Book;
