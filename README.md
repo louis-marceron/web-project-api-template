@@ -51,7 +51,7 @@ Les outils suivants sont des librairies installées à l'aide de NPM :
 
 Installez Node.js : https://nodejs.org/
 
-Si vous compter utiliser Github, vous pouvez créer un repository à partir de ce modèle en cliquant sur le bouton "Use this template" en haut à droite de la page.
+Si vous comptez utiliser Github, vous pouvez créer un repository à partir de ce modèle en cliquant sur le bouton "Use this template" en haut à droite de la page.
 
 ### Exécution en local
 
