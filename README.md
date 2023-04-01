@@ -76,8 +76,8 @@ Si vous comptez utiliser Github, vous pouvez créer un repository à partir de c
 ### Déploiement sur Dokku
 
 Le guide donné par Polytech : https://docs.google.com/document/d/1XUHSBpwVw_dUV-9H2Ou-Ve_Gat0HmM0y3o8NaIOx1H4/edit
-1. Envoyer sa clef ssh publique à Luca pour qu'il la dépose sur Dokku.
-2. Créer l'application en remplaçant `mon-application` par le nom de votre application :
+1. Envoyez votre clef ssh publique à Luca pour qu'il la dépose sur Dokku.
+2. Créez l'application en remplaçant `mon-application` par le nom de votre application :
 
         ssh dokku@cluster-ig3.igpolytech.fr apps:create mon-application
                 
@@ -85,9 +85,9 @@ Le guide donné par Polytech : https://docs.google.com/document/d/1XUHSBpwVw_dUV
    
 3. Passez votre site un https :
 
-	ssh dokku@cluster-ig3.igpolytech.fr letsencrypt:enable mon-application
+        ssh dokku@cluster-ig3.igpolytech.fr letsencrypt:enable mon-application
 	
-4. Ajouter les variables d'environnement sur Dokku. C'est là qu'on mettra les identifiants de connexion à la BD. Pour l'instant, on va indiquer que l'on est dans un environnement de production (environnement où l'application est déployée et mise à disposition aux utilisateurs) :
+4. Ajoutez les variables d'environnement sur Dokku. C'est là qu'on mettra les identifiants de connexion à la BD. Pour l'instant, on va indiquer que l'on est dans un environnement de production (environnement où l'application est déployée et mise à disposition aux utilisateurs) :
 
         ssh dokku@cluster-ig3.igpolytech.fr config:set mon-application NODE_ENV=production
 
