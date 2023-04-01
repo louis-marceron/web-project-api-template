@@ -82,26 +82,31 @@ Le guide donné par Polytech : https://docs.google.com/document/d/1XUHSBpwVw_dUV
         ssh dokku@cluster-ig3.igpolytech.fr apps:create mon-application
                 
    ⚠️ Pour que la connexion ssh puisse marcher, il faut qu'il y ait dans votre ordinateur la clef ssh privée correspondant à la clef publique que vous avez envoyé à Luca.
-3. Ajouter les variables d'environnement sur Dokku. C'est là qu'on mettra les identifiants de connexion à la BD. Pour l'instant, on va indiquer que l'on est dans un environnement de production (environnement où l'application est déployée et mise à disposition aux utilisateurs) :
+   
+3. Passez votre site un https :
+
+	ssh dokku@cluster-ig3.igpolytech.fr letsencrypt:enable mon-application
+	
+4. Ajouter les variables d'environnement sur Dokku. C'est là qu'on mettra les identifiants de connexion à la BD. Pour l'instant, on va indiquer que l'on est dans un environnement de production (environnement où l'application est déployée et mise à disposition aux utilisateurs) :
 
         ssh dokku@cluster-ig3.igpolytech.fr config:set mon-application NODE_ENV=production
 
-4. Créez une base de données pour votre application en remplaçant `ma-bd` par le nom de votre base de données:
+5. Créez une base de données pour votre application en remplaçant `ma-bd` par le nom de votre base de données:
 
         ssh dokku@cluster-ig3.igpolytech.fr postgres:create ma-bd
 
-5. Reliez la base de données à votre application :
+6. Reliez la base de données à votre application :
 
         ssh dokku@cluster-ig3.igpolytech.fr postgres:link ma-bd mon-application
 
-6. Sur votre projet Git en local, ajouter une remote vers le serveur Dokku :
+7. Sur votre projet Git en local, ajouter une remote vers le serveur Dokku :
 
         git remote add dokku dokku@cluster-ig3.igpolytech.fr:mon-application
 
-7. Poussez votre code sur le serveur avec cette commande : 
+8. Poussez votre code sur le serveur avec cette commande : 
 	`git push dokku`
 
-8. Pour tester l'api, vous pouvez ajouter des données à la base de données. Pour cela connectez vous à la base de données avec la commande suivante :
+9. Pour tester l'api, vous pouvez ajouter des données à la base de données. Pour cela connectez vous à la base de données avec la commande suivante :
 `ssh dokku@cluster-ig3.igpolytech.fr postgres:connect ma-bd`, puis ajoutez des données à la base de données avec les commandes suivantes :
         
         INSERT INTO books (title, author)
@@ -113,8 +118,7 @@ Le guide donné par Polytech : https://docs.google.com/document/d/1XUHSBpwVw_dUV
         INSERT INTO Book (title, author)
         VALUES ('Les Miserables', 'Victor Hugo');
 
-9. Vous pouvez enfin tester l'api en utilisant l'adresse suivante : `http://mon-application.cluster-ig3.igpolytech.fr/books` 
-⚠️ Si vous êtes sur Firefox que vous avez un message d'erreur du type : `Cannot GET /books`, il faut cliquer sur le cadenas en haut à droite de la barre d'adresse et cliquer sur "Ajouter une exception". Réécrivez ensuite l'URL en enlevant le "s" à "https".
+10. Vous pouvez enfin tester l'api en utilisant l'adresse suivante : `http://mon-application.cluster-ig3.igpolytech.fr/books` 
 
 ## Travail à apporter
 
