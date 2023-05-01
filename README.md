@@ -120,13 +120,6 @@ Le guide donné par Polytech : https://docs.google.com/document/d/1XUHSBpwVw_dUV
 
 10. Vous pouvez enfin tester l'api en utilisant l'adresse suivante : `http://mon-application.cluster-ig3.igpolytech.fr/books` 
 
-## Travail à apporter
-
-1. Pour des raisons de sécurité, il faut faire passer le serveur http en serveur https afin de sécuriser l'échange de requêtes. (WIP)
-
-2. Afin de gérer des utilisateurs dans notre api, nous vous proposons les articles suivants: - [Authentification utilisateurs (OpenClassrooms)](https://openclassrooms.com/fr/courses/6390246-passez-au-full-stack-avec-node-js-express-et-mongodb/6466459-optimisez-la-structure-du-back-end) - [Forgot password functionality (Medium)](https://cinquewebdev.medium.com/how-to-implement-forgot-password-functionality-with-jwt-authentication-e1381263026c)
-   Attention: ces ressources peuvent comporter des erreurs ou ne pas utiliser les mêmes librairies que vous
-
 ## Test de l'API
 
 Une fois les routes de notre API configurées dans notre backend, il nous faut les tester. Pour cela vous pouvez utilier soit [Insomnia](https://insomnia.rest/), soit [Postman](https://www.postman.com/).
