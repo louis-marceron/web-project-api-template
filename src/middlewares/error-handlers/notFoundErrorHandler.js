@@ -1,7 +1,7 @@
-function notFoundErrorHandler(req, res, next) {
+function notFoundErrorHandler(_req, _res, next) {
     const err = new Error('Not Found');
     err.status = 404;
     next(err);
 }
 
-module.exports = notFoundErrorHandler;
+export default notFoundErrorHandler;

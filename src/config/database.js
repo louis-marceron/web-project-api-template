@@ -1,5 +1,10 @@
-const { Sequelize } = require('sequelize');
+import { Sequelize } from 'sequelize'
 
-const sequelize = new Sequelize(process.env.DATABASE_URL);
+if (process.env.DATABASE_URL === undefined) {
+    console.error('Missing DATABASE_URL environment variable.')
+    process.exit(1)
+}
 
-module.exports = sequelize;
+const sequelize = new Sequelize(process.env.DATABASE_URL, { dialect: 'postgres' })
+
+export default sequelize

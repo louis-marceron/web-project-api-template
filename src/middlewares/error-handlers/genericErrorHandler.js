@@ -1,4 +1,4 @@
-function genericErrorHandler(err, req, res, next) {
+function genericErrorHandler(err, _req, res) {
     // Si le code d'erreur n'est pas défini, met 500 par défaut (erreur interne)
     res.status(err.status || 500);
 
@@ -10,4 +10,4 @@ function genericErrorHandler(err, req, res, next) {
     });
 }
 
-module.exports = genericErrorHandler;
+export default genericErrorHandler;

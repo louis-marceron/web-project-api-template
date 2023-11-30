@@ -1,5 +1,5 @@
-const { DataTypes } = require('sequelize');
-const sequelize = require('../config/database');
+import { DataTypes } from 'sequelize'
+import sequelize from '../config/database.js'
 
 const Book = sequelize.define('book', {
     id: {
@@ -19,6 +19,6 @@ const Book = sequelize.define('book', {
 }, {
     timestamps: false, // Empêche Sequelize de créer les colonnes createdAt et updatedAt
     freezeTableName: true, // Empêche Sequelize de modifier le nom de la table
-});
+})
 
-module.exports = Book;
+export default Book
