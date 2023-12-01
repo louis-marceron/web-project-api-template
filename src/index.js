@@ -1,3 +1,6 @@
+console.log('DATABASE_URL:', process.env.DATABASE_URL)
+console.log('SECRET:', process.env.SECRET)
+
 if (!process.env.DATABASE_URL) {
     console.error('Missing DATABASE_URL environment variable.')
     process.exit(1)
